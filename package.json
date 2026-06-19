@@ -1,0 +1,25 @@
+{
+  "name": "hawtio-e2e-ts",
+  "version": "1.0.0",
+  "description": "Hawtio E2E test suite – TypeScript + Playwright migration",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:full": "bash scripts/run-tests-with-backend.sh",
+    "test:camel": "playwright test tests/camel",
+    "test:jmx": "playwright test tests/jmx",
+    "test:serial": "playwright test --project=serial",
+    "test:headed": "playwright test --headed",
+    "test:springboot": "cp .env.springboot .env && playwright test",
+    "test:quarkus": "cp .env.quarkus .env && playwright test",
+    "setup:springboot": "cp .env.springboot .env && playwright test --project=setup",
+    "setup:quarkus": "cp .env.quarkus .env && playwright test --project=setup",
+    "report": "playwright show-report",
+    "codegen": "playwright codegen"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.44.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}

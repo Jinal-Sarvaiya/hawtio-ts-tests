@@ -1,0 +1,22 @@
+# Node modules
+node_modules/
+
+# Test results
+test-results/
+playwright-report/
+
+# Test state
+storageState.json
+sessionStorage.json
+
+# Environment variables (contains credentials)
+.env
+
+# Debug files
+debug-*.ts
+*.log
+test-output.log
+full-test-results.log
+
+# OS files
+.DS_Store
